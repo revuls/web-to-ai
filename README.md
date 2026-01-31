@@ -9,6 +9,8 @@ A Chrome extension designed to extract clean, readable content from web pages an
 *   **Useful Metadata**: Automatically includes the page title, source URL, author, extraction date, and site summary.
 *   **Token Estimation**: Displays an estimated token count to help you manage your AI context window usage.
 *   **Easy to Use**: Copy content to the clipboard or download it as a `.md` file with a single click.
+*   **Local History**: Automatically saves your extracted pages to local storage, allowing you to re-copy or manage your past extractions.
+*   **Persistent Storage**: History remains available across browser sessions until cleared.
 
 ## Technologies Used
 
@@ -35,6 +37,11 @@ Done! The extension should now appear in your toolbar.
 3.  A popup window will open with two options:
     *   **Copy to Clipboard**: Copies all content in Markdown format to the clipboard.
     *   **Download .md**: Downloads the content as a `.md` file to your computer.
+4.  **Manage History**:
+    *   View your past extractions in the **History** section at the bottom of the popup.
+    *   Click **Copy** on any history item to re-copy its content.
+    *   Click **X** to remove an individual item.
+    *   Click **Clear** to delete all history.
 
 ## Project Structure
 
