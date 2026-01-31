@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Web to AI Context (Pro)",
+  "version": "2.0",
+  "description": "Extracts clean, readable content from web pages and converts it to Markdown for AI context.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/readability.js",
+        "lib/turndown.js",
+        "content.js"
+      ]
+    }
+  ]
+}
