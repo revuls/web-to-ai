@@ -41,6 +41,108 @@
       color: #888;
       text-align: center;
     }
+
+    /* Separator */
+    .separator {
+      margin: 15px 0;
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+
+    /* History Header */
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .history-header h4 {
+      margin: 0;
+    }
+
+    /* Clear Button */
+    .btn-clear {
+      width: auto !important;
+      /* Override default button width */
+      padding: 5px 10px;
+      font-size: 11px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      display: none;
+      /* Initially hidden */
+    }
+
+    /* History List Container */
+    #historyList {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    /* History Items */
+    .history-item {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      padding: 8px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+    }
+
+    .history-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .history-title {
+      font-size: 12px;
+      font-weight: bold;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+
+    .history-meta {
+      font-size: 10px;
+      color: #888;
+      margin-bottom: 5px;
+    }
+
+    .history-actions {
+      display: flex;
+      gap: 5px;
+    }
+
+    .btn-small {
+      padding: 4px 8px;
+      font-size: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: auto !important;
+      margin: 0 !important;
+    }
+
+    .btn-recopy {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .btn-delete {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    .btn-delete:hover {
+      background-color: #d32f2f;
+      color: white;
+    }
   </style>
 </head>
 
@@ -50,6 +152,15 @@
   <button id="downloadBtn" class="btn-download">Download .md</button>
   <div id="status"></div>
   <div id="tokenCount" class="token-count"></div>
+
+  <hr class="separator">
+
+  <div class="history-header">
+    <h4>History</h4>
+    <button id="clearHistoryBtn" class="btn-clear">Clear</button>
+  </div>
+
+  <div id="historyList"></div>
   <script src="popup.js"></script>
 </body>
 
