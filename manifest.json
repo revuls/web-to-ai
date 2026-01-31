@@ -7,8 +7,18 @@
     "activeTab",
     "scripting"
   ],
+  "icons": {
+    "16": "icons/logo_16.png",
+    "48": "icons/logo_48.png",
+    "128": "icons/logo.png"
+  },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/logo_16.png",
+      "48": "icons/logo_48.png",
+      "128": "icons/logo.png"
+    }
   },
   "content_scripts": [
     {

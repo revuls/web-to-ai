@@ -3,11 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const downloadBtn = document.getElementById('downloadBtn');
   const status = document.getElementById('status');
 
+  const tokenCountFn = document.getElementById('tokenCount');
+
   // Generic function to request markdown from the active tab
   function getMarkdown(callback) {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, { action: "extract" }, (response) => {
         if (response && response.markdown) {
+          const estimatedTokens = Math.ceil(response.markdown.length / 4);
+          tokenCountFn.innerText = `~${estimatedTokens} tokens`;
           callback(response.markdown, tabs[0].title);
         } else {
           status.innerText = "Error extracting content.";

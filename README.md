@@ -7,6 +7,7 @@ A Chrome extension designed to extract clean, readable content from web pages an
 *   **Clean Content Extraction**: Automatically removes ads, navigation menus, footers, and other unnecessary elements using `Readability.js`.
 *   **Markdown Conversion**: Transforms clean HTML content into a structured, easy-to-read Markdown format with `Turndown.js`.
 *   **Useful Metadata**: Automatically includes the page title, source URL, author, extraction date, and site summary.
+*   **Token Estimation**: Displays an estimated token count to help you manage your AI context window usage.
 *   **Easy to Use**: Copy content to the clipboard or download it as a `.md` file with a single click.
 
 ## Technologies Used
