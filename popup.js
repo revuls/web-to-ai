@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = document.createElement('div');
       el.className = 'history-item';
 
-      const tokensText = item.tokenCount ? ` • ~${item.tokenCount} tokens` : '';
+      const tokensText = item.tokenCount ? ` (~${item.tokenCount} tokens)` : '';
 
       el.innerHTML = `
         <div class="history-item-header">
